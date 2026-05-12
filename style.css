@@ -628,3 +628,31 @@ blockquote {
 .panel {
   padding: 20px 22px;
 }
+
+
+/* Enhanced boot sequence */
+
+.boot-log {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.boot-entry {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.boot-entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boot-line span {
+  animation: load 5.2s forwards cubic-bezier(.22,1,.36,1);
+}
+
+#boot {
+  transition: opacity 1s ease, visibility 1s ease;
+}
